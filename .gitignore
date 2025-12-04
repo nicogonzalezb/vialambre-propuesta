@@ -1,0 +1,13 @@
+# Archivos temporales y de Google Drive
+propuesta_comercial_tmp.html
+propuesta_comercial.md.gdoc
+Propuesta Comercial desarrollo Vialambre .pdf
+
+# Node
+node_modules/
+package-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
+
