@@ -8,6 +8,11 @@ const __dirname = path.dirname(__filename);
 
 app.use(express.static(__dirname));
 
+// Ruta principal sirve propuesta_comercial.html
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "propuesta_comercial.html"));
+});
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
