@@ -640,6 +640,72 @@
             width: 20px;
             height: 20px;
         }
+
+        /* Social Proof */
+        .social-proof {
+            text-align: center;
+            padding: 60px 0;
+            background: var(--bg-card);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            margin-top: 40px;
+        }
+
+        .social-proof h4 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+        }
+
+        .logos-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+
+        .logo-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 120px;
+            height: 60px;
+            padding: 12px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .logo-item:hover {
+            border-color: var(--border-accent);
+            transform: translateY(-2px);
+        }
+
+        .logo-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: grayscale(100%) brightness(1.5);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .logo-item:hover img {
+            filter: grayscale(0%) brightness(1);
+            opacity: 1;
+        }
+
+        .social-proof .reference-text {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -664,7 +730,7 @@
             <div class="meta">
                 <div class="meta-item">
                     <div class="meta-label">Fecha</div>
-                    <div class="meta-value">1 de Diciembre, 2025</div>
+                    <div class="meta-value">5 de Diciembre, 2025</div>
                 </div>
                 <div class="meta-item">
                     <div class="meta-label">Cliente</div>
@@ -839,6 +905,11 @@
             
             <div class="why-grid">
                 <div class="why-card">
+                    <div class="icon-wrap">🤝</div>
+                    <h4>Ya somos su proveedor</h4>
+                    <p>Conocemos sus procesos, su equipo y sus desafíos. Tenemos contexto que otros proveedores tardarían meses en adquirir.</p>
+                </div>
+                <div class="why-card">
                     <div class="icon-wrap">💰</div>
                     <h4>Sin costos ocultos</h4>
                     <p>No cobramos costos de instalación ni desarrollo inicial. Lo que pagas mensualmente es tu costo total. Sin sorpresas ni extras.</p>
@@ -858,6 +929,29 @@
                     <h4>Mismas plataformas</h4>
                     <p>Todo funciona en sus sistemas actuales. Sin migraciones, sin nuevas herramientas, sin interrupciones.</p>
                 </div>
+            </div>
+
+            <!-- Social Proof -->
+            <div class="social-proof">
+                <h4>Empresas que confían en nosotros</h4>
+                <div class="logos-grid">
+                    <div class="logo-item">
+                        <img src="logo-sr-insignia.png" alt="Sr Insignia">
+                    </div>
+                    <div class="logo-item">
+                        <img src="logo-uff-nails.png" alt="Uff Nails">
+                    </div>
+                    <div class="logo-item">
+                        <img src="logo-micasino.png" alt="micasino.com">
+                    </div>
+                    <div class="logo-item">
+                        <img src="logo-cidi.png" alt="CIDI">
+                    </div>
+                    <div class="logo-item">
+                        <img src="logo-que-rollo.png" alt="Qué Rollo">
+                    </div>
+                </div>
+                <p class="reference-text">Si necesitas referencias comerciales, podemos entregártelas.</p>
             </div>
         </section>
 

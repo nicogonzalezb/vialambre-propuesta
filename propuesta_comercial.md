@@ -1,6 +1,6 @@
 # Propuesta Comercial y Técnica: Ecosistema de IA para Vialambre
 
-**Fecha:** 1 de Diciembre de 2025  
+**Fecha:** 5 de Diciembre de 2025  
 **Cliente:** Vialambre SAS  
 **Contexto:** Alineación con la "Estrategia y Planificación de Marketing y Ventas 2025".
 
