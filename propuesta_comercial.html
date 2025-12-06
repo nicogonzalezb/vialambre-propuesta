@@ -641,14 +641,15 @@
             height: 20px;
         }
 
-        /* Social Proof */
+        /* Logo Carousel - CSS Only */
         .social-proof {
             text-align: center;
-            padding: 60px 0;
+            padding: 48px 40px;
             background: var(--bg-card);
             border-radius: 20px;
             border: 1px solid var(--border-color);
             margin-top: 40px;
+            overflow: hidden;
         }
 
         .social-proof h4 {
@@ -659,32 +660,33 @@
             margin-bottom: 32px;
         }
 
-        .logos-grid {
+        .logos-track {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 32px;
-            margin-bottom: 32px;
+            animation: scrollLogos 20s linear infinite;
+            width: max-content;
+        }
+
+        .logos-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scrollLogos {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
 
         .logo-item {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 120px;
-            height: 60px;
-            padding: 12px;
+            min-width: 140px;
+            height: 70px;
+            padding: 16px 24px;
+            margin: 0 16px;
             background: var(--bg-secondary);
             border: 1px solid var(--border-color);
             border-radius: 12px;
-            transition: all 0.3s ease;
-            overflow: hidden;
-        }
-
-        .logo-item:hover {
-            border-color: var(--border-accent);
-            transform: translateY(-2px);
+            flex-shrink: 0;
         }
 
         .logo-item img {
@@ -705,6 +707,7 @@
             font-size: 14px;
             color: var(--text-muted);
             font-style: italic;
+            margin-top: 32px;
         }
     </style>
 </head>
@@ -931,25 +934,20 @@
                 </div>
             </div>
 
-            <!-- Social Proof -->
+            <!-- Social Proof - Logos -->
             <div class="social-proof">
                 <h4>Empresas que confían en nosotros</h4>
-                <div class="logos-grid">
-                    <div class="logo-item">
-                        <img src="logo-sr-insignia.png" alt="Sr Insignia">
-                    </div>
-                    <div class="logo-item">
-                        <img src="logo-uff-nails.png" alt="Uff Nails">
-                    </div>
-                    <div class="logo-item">
-                        <img src="logo-micasino.png" alt="micasino.com">
-                    </div>
-                    <div class="logo-item">
-                        <img src="logo-cidi.png" alt="CIDI">
-                    </div>
-                    <div class="logo-item">
-                        <img src="logo-que-rollo.png" alt="Qué Rollo">
-                    </div>
+                <div class="logos-track">
+                    <div class="logo-item"><img src="logo-sr-insignia.png" alt="Sr Insignia"></div>
+                    <div class="logo-item"><img src="logo-uff-nails.png" alt="Uff Nails"></div>
+                    <div class="logo-item"><img src="logo-micasino.png" alt="micasino.com"></div>
+                    <div class="logo-item"><img src="logo-cidi.png" alt="CIDI"></div>
+                    <div class="logo-item"><img src="logo-que-rollo.png" alt="Qué Rollo"></div>
+                    <div class="logo-item"><img src="logo-sr-insignia.png" alt="Sr Insignia"></div>
+                    <div class="logo-item"><img src="logo-uff-nails.png" alt="Uff Nails"></div>
+                    <div class="logo-item"><img src="logo-micasino.png" alt="micasino.com"></div>
+                    <div class="logo-item"><img src="logo-cidi.png" alt="CIDI"></div>
+                    <div class="logo-item"><img src="logo-que-rollo.png" alt="Qué Rollo"></div>
                 </div>
                 <p class="reference-text">Si necesitas referencias comerciales, podemos entregártelas.</p>
             </div>
