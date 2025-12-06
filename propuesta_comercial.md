@@ -35,15 +35,27 @@ Este bot actúa en la primera línea (Facebook, Web, WhatsApp). **NO** realiza c
 
 ## 3. Solución B: "El Auditor de Calidad" (Bot Supervisor)
 
-Su objetivo es auditar que la fuerza de ventas cumpla el proceso definido.
+Su objetivo es actuar como un **evaluador comercial experto** que audita, analiza y genera insights accionables sobre el desempeño del equipo de ventas.
 
 ### Alcance Funcional
 
-Es un bot interno que analiza las transcripciones de los chats en el CRM (Kommo) después de la intervención humana.
+Es un bot interno que analiza las transcripciones de los chats en el CRM (Kommo) después de la intervención humana. Va más allá de una simple revisión: actúa como un **coach comercial con IA**.
 
+#### Auditoría de Cumplimiento BANT
 *   **Auditoría Automática:** Revisa si el vendedor cumplió el checklist BANT antes de enviar la oferta.
 *   **Detección de Fugas:** Alerta si se están enviando cotizaciones a ciegas (sin preguntar presupuesto o necesidad real).
 *   **Scoring:** Califica a cada vendedor (0-100%) en su adherencia al guión de ventas.
+
+#### Insights Comerciales Inteligentes
+*   **Análisis de Tiempos de Respuesta:** Detecta y alerta cuando un vendedor está respondiendo tarde. Ejemplo: *"El lead esperó 4 horas para una respuesta. Esto reduce la probabilidad de cierre en un 60%."*
+*   **Detección de Desviaciones:** Identifica cuando el vendedor está haciendo cosas diferentes al proceso estándar. Ejemplo: *"Se ofreció descuento sin haber validado el presupuesto del cliente."*
+*   **Oportunidades Perdidas:** Señala momentos donde se pudo haber cerrado o avanzado la venta pero no se hizo. Ejemplo: *"El cliente mostró urgencia pero no se le propuso agendar una llamada."*
+*   **Patrones de Comportamiento:** Genera reportes periódicos con tendencias del equipo. Ejemplo: *"Los martes por la tarde el tiempo de respuesta aumenta un 40%."*
+
+#### Alertas y Recomendaciones en Tiempo Real
+*   **Alertas Críticas:** Notificaciones inmediatas cuando se detectan errores graves en el proceso de venta.
+*   **Sugerencias de Mejora:** Recomendaciones específicas para cada vendedor basadas en su historial de conversaciones.
+*   **Dashboard de Rendimiento:** Visibilidad completa del estado de cumplimiento del equipo comercial.
 
 ## 4. Cronograma de Implementación
 
@@ -61,7 +73,7 @@ La propuesta se presenta bajo un modelo de recurrencia mensual. El cliente tiene
 | Solución | Descripción | Inversión (Mensual) |
 | :--- | :--- | :--- |
 | **Solución A** | **Bot Perfilador (Front):** Atención al cliente, filtrado BANT y derivación inteligente en WhatsApp/CRM. | **$300 USD/mes** |
-| **Solución B** | **Bot Auditor (Back):** Análisis de calidad, revisión de chats humanos y reporte de cumplimiento de procesos. | **$300 USD/mes** |
+| **Solución B** | **Bot Auditor (Back):** Evaluador comercial experto con auditoría BANT, insights inteligentes, alertas de tiempos de respuesta y detección de desviaciones del proceso. | **$300 USD/mes** |
 | **Pack Completo** | Implementación simultánea de ambas soluciones (**Ecosistema IA Integral**). | **$600 USD/mes** |
 
 > **\*** Nota: Los valores incluyen la configuración, implementación, el periodo de ajustes inicial (Fase 2) y el consumo de tokens de IA.
