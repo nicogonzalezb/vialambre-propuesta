@@ -77,6 +77,8 @@ La propuesta se presenta bajo un modelo de recurrencia mensual. El cliente tiene
 | **Pack Completo** | Implementación simultánea de ambas soluciones (**Ecosistema IA Integral**). | **$600 USD/mes** |
 
 > **\*** Nota: Los valores incluyen la configuración, implementación, el periodo de ajustes inicial (Fase 2) y el consumo de tokens de IA.
+>
+> **Contrato:** Firma mínima de 1 año.
 
 ## 6. Arquitectura Técnica Requerida
 
