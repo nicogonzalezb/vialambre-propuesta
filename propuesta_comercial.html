@@ -709,6 +709,131 @@
             font-style: italic;
             margin-top: 32px;
         }
+
+        /* FAQ Accordion */
+        .faq-container {
+            margin-top: 32px;
+        }
+
+        .faq-category {
+            margin-bottom: 24px;
+        }
+
+        .faq-category-title {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-primary);
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: var(--border-accent);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            text-align: left;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .faq-question:hover {
+            background: var(--bg-card-hover);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            font-weight: 300;
+            color: var(--accent-primary);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            margin-left: 16px;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 1000px;
+        }
+
+        .faq-answer-content {
+            padding: 0 24px 24px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .faq-answer-content p {
+            margin-bottom: 12px;
+        }
+
+        .faq-answer-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-answer-content strong {
+            color: var(--text-primary);
+        }
+
+        .faq-answer-content ul {
+            list-style: none;
+            margin: 12px 0;
+            padding-left: 0;
+        }
+
+        .faq-answer-content ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+        }
+
+        .faq-answer-content ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-primary);
+        }
+
+        .faq-answer-content .highlight-box {
+            background: var(--accent-glow);
+            border: 1px solid var(--border-accent);
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin: 12px 0;
+            font-size: 13px;
+        }
     </style>
 </head>
 <body>
@@ -981,21 +1106,21 @@
                 <div class="pricing-card">
                     <div class="name">Solución A</div>
                     <h4>Bot Perfilador</h4>
-                    <div class="price">$300<span> USD</span></div>
+                    <div class="price">$1.2<span>M COP</span></div>
                     <div class="period">por mes</div>
                     <p class="description">Atención al cliente, filtrado BANT y derivación inteligente en WhatsApp/CRM.</p>
                 </div>
                 <div class="pricing-card">
                     <div class="name">Solución B</div>
                     <h4>Bot Auditor</h4>
-                    <div class="price">$300<span> USD</span></div>
+                    <div class="price">$1.2<span>M COP</span></div>
                     <div class="period">por mes</div>
                     <p class="description">Evaluador comercial experto: auditoría BANT, insights inteligentes, alertas de tiempos y detección de desviaciones.</p>
                 </div>
                 <div class="pricing-card featured">
                     <div class="name">Pack Completo</div>
                     <h4>Ecosistema IA Integral</h4>
-                    <div class="price">$600<span> USD</span></div>
+                    <div class="price">$2.4<span>M COP</span></div>
                     <div class="period">por mes</div>
                     <p class="description">Implementación simultánea de ambas soluciones para máximo impacto.</p>
                 </div>
@@ -1003,6 +1128,7 @@
             
             <div class="note">
                 <p><strong>Nota:</strong> Los valores incluyen la configuración, implementación, el periodo de ajustes inicial (Fase 2) y el consumo de tokens de IA.</p>
+                <p style="margin-top: 12px;"><strong>Límite de conversaciones:</strong> Hasta 3,000 conversaciones nuevas al mes. Si se supera este volumen, se aplica un costo adicional de <strong>$250,000 COP por cada 1,000 conversaciones adicionales</strong>.</p>
                 <p style="margin-top: 12px;"><strong>Contrato:</strong> Firma mínima de 1 año.</p>
             </div>
         </section>
@@ -1032,6 +1158,202 @@
             </div>
         </section>
 
+        <!-- FAQ Section -->
+        <section>
+            <h2><span class="number">07</span>Sus Preguntas, Respondidas</h2>
+            <p>Respuestas a las consultas que nos han compartido sobre esta propuesta.</p>
+            
+            <div class="faq-container">
+                <!-- Integración y Funcionamiento Técnico -->
+                <div class="faq-category">
+                    <div class="faq-category-title">Integración y Funcionamiento Técnico</div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">¿WhatsApp Web o API oficial?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>La propuesta actual está cotizada sobre <strong>WhatsApp Web</strong>, que es como ustedes tienen configurado Kommo actualmente (escanean un QR, igual que cuando usan WhatsApp Web en el navegador).</p>
+                                <p>Sin embargo, <strong>sí podemos implementar la API oficial de WhatsApp Business</strong> y de hecho lo recomendamos por sus ventajas en estabilidad y funcionalidades, aunque conlleva costos adicionales.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">¿Cómo funciona la migración a API de WhatsApp Business?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p><strong>Costos:</strong> Meta cobra por cada mensaje enviado a través de la API, lo cual representa un costo adicional variable según volumen.</p>
+                                <p><strong>Tiempos y dependencias:</strong> Requiere una reunión para evaluar qué tienen ustedes adelantado en la parte de Meta Developers, qué debemos hacer nosotros y qué debe hacer Vialambre. Por esto, sería una <strong>cotización aparte</strong> que depende del avance que tengan con este proyecto.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">¿Los bots son completamente configurables?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Sí, tanto el bot perfilador como el bot auditor son <strong>completamente configurables</strong>. Nosotros nos encargamos de la parte técnica de implementación, pero ustedes —como expertos en su negocio— definen la lógica, los criterios de calificación y los flujos que mejor se adapten a su operación.</p>
+                                <p>Además, todo este proceso de configuración se irá trabajando y refinando en nuestras reuniones de feedback, que se programarán desde el momento de la firma del contrato para asegurar que los bots respondan de acuerdo con las necesidades de su operación.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">¿Quién asume el mantenimiento ante cambios de WhatsApp o Kommo?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p><strong>Nosotros asumimos el mantenimiento y los ajustes necesarios</strong> para que todo siga funcionando correctamente. Esto está cubierto dentro del plan mensual.</p>
+                                <div class="highlight-box">
+                                    <strong>Aclaración importante:</strong> Dado que Meta está cambiando constantemente sus políticas con WhatsApp Web y Kommo depende de esa conexión, si algo cambia entre ellos que afecte la integración, sería un tema de Kommo y no seríamos responsables de esos ajustes. Por esta razón, <strong>recomendamos migrar a la API oficial de Meta</strong>.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">¿Se requiere mantener sesión activa en WhatsApp Web?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Con la conexión vía WhatsApp Web, los mecanismos son los mismos que ya manejan con Kommo: es necesario <strong>abrir la sesión del celular al menos una vez a la semana</strong> para mantener la conexión activa.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Rendimiento, KPIs y Fiabilidad -->
+                <div class="faq-category">
+                    <div class="faq-category-title">Rendimiento, KPIs y Fiabilidad</div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">¿Cuentan con benchmarks de calidad del filtrado BANT?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Los resultados de ventas dependen del tipo de calificación que manejen ustedes internamente. Nuestro compromiso con la metodología específica llega hasta el punto en que nuestros bots califican y asignan una <strong>"temperatura"</strong> al lead (similar al sistema que manejamos con Sr. Insignia).</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">¿Qué KPIs mide el informe del bot y cómo se calculan?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>El dashboard mide:</p>
+                                <ul>
+                                    <li><strong>Tiempos de respuesta</strong> de cada asesor</li>
+                                    <li><strong>Calidad de las respuestas</strong> según el guión establecido</li>
+                                    <li><strong>Cumplimiento del guión:</strong> la IA revisa cada conversación contra la documentación de cómo debería manejarse</li>
+                                    <li><strong>Volumen de mensajes entrantes por período</strong>, que pueden cruzar con campañas activas para optimizar su estrategia comercial</li>
+                                </ul>
+                                <p>Al final, el informe genera además <strong>insights</strong> clave sobre desempeño y oportunidades de mejora.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">¿El bot auditor alerta o limita al asesor?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>El bot auditor <strong>no bloquea ni lanza alertas en tiempo real</strong>. Funciona de la siguiente manera: después de cada conversación, genera una calificación que se envía como <strong>insight de cada conversación</strong>. Es un sistema de evaluación posterior, no de intervención activa, que será visible en el dashboard mencionado anteriormente.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">¿Cómo funciona la toma de decisiones de la IA?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Los modelos de IA que utilizamos son <strong>probabilísticos</strong>, lo que significa que toman decisiones basándose en patrones aprendidos de millones de conversaciones reales. El modelo analiza:</p>
+                                <ul>
+                                    <li><strong>Contexto completo de la conversación:</strong> no solo palabras clave aisladas</li>
+                                    <li><strong>Intención del cliente:</strong> qué está buscando realmente</li>
+                                    <li><strong>Patrones de comportamiento:</strong> cómo responden clientes similares</li>
+                                    <li><strong>Criterios de calificación que ustedes definen:</strong> presupuesto, autoridad, necesidad, tiempo (BANT)</li>
+                                </ul>
+                                <p>La precisión se ajusta de forma iterativa según las necesidades específicas que ustedes nos indiquen durante las reuniones de feedback.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">¿Cuánto tiempo para obtener resultados confiables?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Los resultados <strong>consistentes</strong> se obtienen desde el día 1, dependiendo de la calidad de la documentación que ustedes nos proporcionen. En nuestra experiencia, <strong>en 3 a 4 semanas</strong> después de habilitar el bot y con el feedback del equipo comercial, la herramienta comenzará a ofrecer resultados cada vez más afinados.</p>
+                                <p>La IA mejora a medida que procesa más casos y recibe retroalimentación. Al inicio nos reunimos con frecuencia para ajustar; con el tiempo, las reuniones de calibración se espacian.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Seguridad, Privacidad y Cumplimiento -->
+                <div class="faq-category">
+                    <div class="faq-category-title">Seguridad, Privacidad y Cumplimiento</div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">¿Dónde se almacenan los datos?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Los datos se almacenan en <strong>servidores propios administrados por nosotros, alojados en AWS (Amazon Web Services)</strong>, con ubicación en Estados Unidos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">¿Cómo garantizan cumplimiento de protección de datos (Habeas Data)?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Contamos con <strong>políticas de manejo de datos personales</strong> que cumplen con la normativa aplicable. Tanto nosotros como AWS cumplimos con estándares de protección de datos personales.</p>
+                                <div class="highlight-box">
+                                    <strong>Importante:</strong> Es responsabilidad del cliente asegurarse de contar con todos los <strong>opt-in y autorizaciones necesarias</strong> para el tratamiento de datos personales de las personas que interactúen con el bot, conforme a la Ley de Habeas Data.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">¿Podemos exportar todo el histórico?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Sí, <strong>desde el momento en que se implemente el sistema</strong> podrán exportar conversaciones, métricas y evaluaciones. No es posible recuperar conversaciones anteriores a la implementación.</p>
+                                <p>La capacidad de exportación también está sujeta a las <strong>políticas de Meta</strong> respecto al almacenamiento y acceso a conversaciones de WhatsApp. Dependiendo del volumen de información acumulada, la exportación masiva de datos <strong>podría generar costos adicionales</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Costos, Soporte y Escalabilidad -->
+                <div class="faq-category">
+                    <div class="faq-category-title">Costos, Soporte y Escalabilidad</div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">¿Qué incluye el precio mensual?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>El precio mensual <strong>sí incluye</strong>:</p>
+                                <ul>
+                                    <li>Ajustes de guiones</li>
+                                    <li>Mantenimiento técnico</li>
+                                    <li>Corrección de errores</li>
+                                    <li>Soporte por horas mensuales</li>
+                                </ul>
+                                <p>Los detalles específicos del alcance se formalizarán en el contrato.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">¿Existe límite de conversaciones? ¿Cómo escala el costo?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>La propuesta actual contempla un límite de <strong>aproximadamente 3,000 conversaciones nuevas al mes</strong>.</p>
+                                <p>Si la demanda crece más allá de este volumen, el costo se incrementa en <strong>$250,000 COP adicionales por cada 1,000 conversaciones nuevas</strong>. Aplicables desde el siguiente cohorte comercial con aviso previo obligatorio.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- CTA -->
         <div class="cta-section">
             <h2>¿Listos para empezar?</h2>
@@ -1048,6 +1370,26 @@
             <p>Propuesta elaborada para Vialambre SAS — Diciembre 2025</p>
         </footer>
     </div>
+
+    <script>
+        // FAQ Accordion functionality
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all other FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Toggle current item
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
 
