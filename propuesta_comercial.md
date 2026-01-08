@@ -84,20 +84,35 @@ La propuesta se presenta bajo un modelo de recurrencia mensual. El cliente tiene
 
 Ofrecemos la configuración completa de la API oficial de WhatsApp Business como un servicio adicional para mayor estabilidad y escalabilidad.
 
-### 6.1 Configuración e Implementación
-*   **Inversión:** $800,000 COP (Pago único).
-*   **Incluye:** Configuración en Meta Developers, integración técnica, webhooks y soporte en migración.
+### 6.1 Calculadora de Costos (Meta - Colombia USD/COP)
 
-### 6.2 Calculadora de Costos (Meta - Colombia USD)
+Basado en un volumen estimado y precios estándar para Colombia. La calculadora permite ajustar tanto el mix de mensajes como la **tasa de cambio (TRM)** para obtener una estimación en pesos colombianos.
 
-*... (Tabla omitida para brevedad en esta actualización específica) ...*
+| Concepto | 14,718 Mensajes | 16,000 Mensajes | 20,000 Mensajes |
+| :--- | :--- | :--- | :--- |
+| **Marketing (10%*)** | 1,472 | 1,600 | 2,000 |
+| **Costo Marketing (USD)** | $18.40 USD | $20.00 USD | $25.00 USD |
+| **Costo Marketing (COP\*\*)** | ~$69,000 COP | ~$75,000 COP | ~$93,750 COP |
+| **Servicio (90%*)** | 13,246 | 14,400 | 18,000 |
+| **Costo Servicio** | $0.00 (Gratis*) | $0.00 (Gratis*) | $0.00 (Gratis*) |
+| **COSTO TOTAL (USD)** | **$18.40 USD** | **$20.00 USD** | **$25.00 USD** |
 
-### 6.3 Definiciones de Mensajes (Meta)
+> **\*** Porcentajes variables: La calculadora permite ajustar el mix de mensajes. Los mensajes de servicio son gratuitos siempre que se respondan dentro de la ventana de 24 horas.
+> 
+> **\*\*** El volumen de 14,718 mensajes corresponde al promedio mensual de los últimos tres meses de Vialambre. Dado que este flujo puede variar, se proporciona la calculadora para ajustar las proyecciones.
+> 
+> **\*\*** Estimación en COP basada en una TRM de $3,750. La herramienta digital permite ajustar este valor.
+
+### 6.2 Definiciones de Mensajes (Meta)
 
 Para entender cómo se aplican los cobros, es fundamental distinguir los dos tipos principales de interacciones:
 
 *   **Mensajes de Servicio (GRATIS\*):** Permiten administrar las consultas de los clientes (vía agente o IA). Al recibir un mensaje del cliente, se abre una **ventana de atención de 24 horas** donde las respuestas de la empresa no tienen costo. Esta ventana se reinicia con cada nueva interacción del usuario.
 *   **Mensajes de Marketing:** Mensajes iniciados por la empresa para objetivos comerciales (ofertas, promociones, retargeting, carritos abandonados o sugerencias de productos). Estos mensajes siempre tienen un costo asociado según la tarifa vigente.
+
+### 6.3 Configuración e Implementación (Servicio Adicional)
+*   **Inversión:** $800,000 COP (Pago único).
+*   **Incluye:** Configuración en Meta Developers, integración técnica, webhooks y soporte en migración.
 
 ### 💡 Análisis e Insights
 *   **Volumen Actual (14,718):** El costo aproximado es de **$18.40 USD/mes**.
