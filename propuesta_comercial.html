@@ -550,8 +550,8 @@
 
         /* WhatsApp API Section - Blue Highlight */
         .whatsapp-api-section {
-            background: linear-gradient(135deg, rgba(33, 150, 243, 0.15) 0%, rgba(33, 150, 243, 0.05) 100%);
-            border: 2px solid rgba(33, 150, 243, 0.4);
+            background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(33, 150, 243, 0.03) 100%);
+            border: 1px solid rgba(33, 150, 243, 0.3);
             border-radius: 24px;
             padding: 48px;
             margin: 40px 0;
@@ -565,8 +565,231 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
+            height: 3px;
             background: linear-gradient(90deg, #2196f3, #42a5f5, #2196f3);
+        }
+
+        .whatsapp-tabs-container {
+            display: flex;
+            gap: 40px;
+            margin-top: 32px;
+        }
+
+        .whatsapp-tabs-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 240px;
+            flex-shrink: 0;
+        }
+
+        .tab-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 16px 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            text-align: left;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn:hover {
+            border-color: rgba(33, 150, 243, 0.5);
+            background: var(--bg-card-hover);
+        }
+
+        .tab-btn.active {
+            background: rgba(33, 150, 243, 0.1);
+            border-color: #2196f3;
+            color: #2196f3;
+        }
+
+        .whatsapp-tabs-content {
+            flex-grow: 1;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Calculator Styles */
+        .calculator-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 32px;
+        }
+
+        .calc-input-group {
+            margin-bottom: 32px;
+        }
+
+        .calc-input-group label {
+            display: block;
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .calc-input-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .calc-input {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 12px 20px;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 20px;
+            font-weight: 600;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .calc-input:focus {
+            outline: none;
+            border-color: #2196f3;
+            box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.1);
+        }
+
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+
+        .calc-stat {
+            padding: 24px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+        }
+
+        .calc-stat .label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .calc-stat .value {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .calc-stat .detail {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .calc-stat.marketing { border-left: 3px solid #f59e0b; }
+        .calc-stat.service { border-left: 3px solid #10b981; }
+
+        .calc-total {
+            background: rgba(33, 150, 243, 0.1);
+            border: 1px solid rgba(33, 150, 243, 0.3);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+        }
+
+        .calc-total .label {
+            font-size: 14px;
+            color: #2196f3;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .calc-total .price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #2196f3;
+            line-height: 1;
+        }
+
+        .calc-total .currency {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+        .calc-insights {
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .calc-insights h4 {
+            font-size: 14px;
+            color: #2196f3;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .calc-insights ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .calc-insights li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .calc-insights li::before {
+            content: '✓';
+            color: #2196f3;
+            font-weight: 800;
+        }
+
+        @media (max-width: 850px) {
+            .whatsapp-tabs-container {
+                flex-direction: column;
+            }
+            .whatsapp-tabs-menu {
+                width: 100%;
+                flex-direction: row;
+                overflow-x: auto;
+                padding-bottom: 8px;
+            }
+            .tab-btn {
+                white-space: nowrap;
+            }
+            .calc-grid {
+                grid-template-columns: 1fr;
+            }
+            .calc-insights ul {
+                grid-template-columns: 1fr;
+            }
         }
 
         .whatsapp-api-section h2 {
@@ -583,15 +806,14 @@
         .whatsapp-api-section .subtitle {
             color: var(--text-secondary);
             font-size: 16px;
-            margin-bottom: 32px;
+            margin-bottom: 0;
         }
 
         .whatsapp-api-card {
             background: var(--bg-card);
-            border: 1px solid rgba(33, 150, 243, 0.3);
+            border: 1px solid rgba(33, 150, 243, 0.1);
             border-radius: 20px;
             padding: 40px;
-            margin-top: 32px;
         }
 
         .whatsapp-api-card h3 {
@@ -1393,44 +1615,142 @@
         <!-- Configuración WhatsApp API -->
         <section id="whatsapp-api-section" class="whatsapp-api-section">
             <h2><span class="number">+</span>Producto Adicional</h2>
-            <p class="subtitle">Configuración de WhatsApp Business API</p>
+            <p class="subtitle">Ecosistema WhatsApp Business API</p>
             
-            <div class="whatsapp-api-card">
-                <h3>Configuración de WhatsApp Business API</h3>
-                <p>Ofrecemos la <strong>configuración completa de la API oficial de WhatsApp Business</strong> como un servicio adicional a la propuesta principal.</p>
-                
-                <div class="whatsapp-api-price">
-                    <span class="price-label">Inversión</span>
-                    <span class="price-value">$800</span>
-                    <span class="price-currency">mil COP</span>
+            <div class="whatsapp-tabs-container">
+                <!-- Sidebar Tabs -->
+                <div class="whatsapp-tabs-menu">
+                    <button class="tab-btn active" onclick="switchTab(event, 'setup-tab')">Configuración</button>
+                    <button class="tab-btn" onclick="switchTab(event, 'calc-tab')">Calculadora de Costos</button>
+                    <button class="tab-btn" onclick="switchTab(event, 'defs-tab')">Definiciones de Mensajes</button>
                 </div>
-                <p style="text-align: center; color: var(--text-muted); font-size: 14px; margin-top: -16px;">Pago único</p>
-                
-                <div class="whatsapp-api-features">
-                    <h4>¿Qué incluye?</h4>
-                    <ul>
-                        <li>Configuración inicial de la cuenta de WhatsApp Business API en Meta Developers</li>
-                        <li>Integración técnica con nuestra plataforma</li>
-                        <li>Configuración de webhooks y endpoints necesarios</li>
-                        <li>Pruebas de funcionamiento y validación</li>
-                        <li>Documentación técnica de la configuración realizada</li>
-                        <li>Soporte durante el proceso de migración</li>
-                    </ul>
-                </div>
-                
-                <div class="whatsapp-api-features">
-                    <h4>Ventajas de migrar a WhatsApp Business API</h4>
-                    <ul>
-                        <li>Mayor estabilidad y confiabilidad en la conexión</li>
-                        <li>No requiere mantener sesión activa manualmente</li>
-                        <li>Mayor control sobre el histórico de conversaciones</li>
-                        <li>Mejor cumplimiento con políticas de Meta</li>
-                        <li>Escalabilidad mejorada para alto volumen de mensajes</li>
-                    </ul>
-                </div>
-                
-                <div class="whatsapp-api-note">
-                    <p><strong>Nota importante:</strong> Este servicio es independiente de la propuesta principal y puede contratarse de forma adicional. Los costos mensuales de mensajes enviados a través de la API son gestionados directamente con Meta según su plan de facturación.</p>
+
+                <!-- Content Area -->
+                <div class="whatsapp-tabs-content">
+                    <!-- Tab 1: Setup Info -->
+                    <div id="setup-tab" class="tab-content active">
+                        <div class="whatsapp-api-card">
+                            <h3>Configuración de WhatsApp Business API</h3>
+                            <p>Ofrecemos la <strong>configuración completa de la API oficial de WhatsApp Business</strong> como un servicio adicional a la propuesta principal.</p>
+                            
+                            <div class="whatsapp-api-price">
+                                <span class="price-label">Inversión</span>
+                                <span class="price-value">$800</span>
+                                <span class="price-currency">mil COP</span>
+                            </div>
+                            <p style="text-align: center; color: var(--text-muted); font-size: 14px; margin-top: -16px;">Pago único</p>
+                            
+                            <div class="whatsapp-api-features">
+                                <h4>¿Qué incluye?</h4>
+                                <ul>
+                                    <li>Configuración inicial en Meta Developers</li>
+                                    <li>Integración técnica y Webhooks</li>
+                                    <li>Pruebas de funcionamiento y validación</li>
+                                    <li>Soporte durante la migración</li>
+                                </ul>
+                            </div>
+
+                            <div class="whatsapp-api-note">
+                                <p><strong>Nota:</strong> Este servicio es independiente y puede contratarse de forma adicional. Los costos mensuales de Meta se gestionan aparte.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 2: Calculator -->
+                    <div id="calc-tab" class="tab-content">
+                        <div class="calculator-card">
+                            <div class="calc-input-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 32px;">
+                                <div class="calc-input-group" style="margin-bottom: 0;">
+                                    <label for="message-count">Volumen de Mensajes</label>
+                                    <div class="calc-input-wrapper">
+                                        <input type="number" id="message-count" class="calc-input" value="14718" oninput="calculateCosts()">
+                                    </div>
+                                </div>
+                                <div class="calc-input-group" style="margin-bottom: 0;">
+                                    <label for="service-percent">Mensajes de Servicio (%)</label>
+                                    <div class="calc-input-wrapper">
+                                        <input type="number" id="service-percent" class="calc-input" value="90" min="85" max="99" oninput="calculateCosts()">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="calc-grid">
+                                <div class="calc-stat marketing">
+                                    <div id="marketing-label" class="label">Mensajes de Marketing (10%)</div>
+                                    <div id="marketing-count" class="value">1,472</div>
+                                    <div id="marketing-cost" class="detail">$18.40 USD</div>
+                                </div>
+                                <div class="calc-stat service">
+                                    <div id="service-label" class="label">Mensajes de Servicio (90%)</div>
+                                    <div id="service-count" class="value">13,246</div>
+                                    <div class="detail">$0.00 USD (Gratis*)</div>
+                                </div>
+                            </div>
+
+                            <div class="calc-total">
+                                <div class="label">Costo Total Mensual (Meta)</div>
+                                <div id="total-cost" class="price">$18.40</div>
+                                <div class="currency">Dólares Americanos (USD)</div>
+                            </div>
+
+                            <div class="calc-insights">
+                                <h4>💡 Análisis e Insights</h4>
+                                <ul>
+                                    <li>Solo pagas por marketing (10%)</li>
+                                    <li>Servicio (90%) es 100% GRATIS*</li>
+                                    <li>Costos altamente predecibles</li>
+                                    <li>Escalabilidad económica</li>
+                                </ul>
+                                <p style="font-size: 12px; color: var(--text-muted); margin-top: 16px;">* Los mensajes de servicio son gratuitos dentro de la ventana de 24 horas. Precios basados en Colombia.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 3: Definitions -->
+                    <div id="defs-tab" class="tab-content">
+                        <div class="calculator-card">
+                            <div class="calc-insights" style="margin-top: 0; padding-top: 0; border-top: none;">
+                                <div style="margin-bottom: 32px;">
+                                    <h4 style="color: #10b981; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                                        <span style="width: 12px; height: 12px; background: #10b981; border-radius: 50%;"></span>
+                                        Mensajes de Servicio (Gratis*)
+                                    </h4>
+                                    <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
+                                        Son mensajes que permiten administrar las consultas de los clientes, ya sea a través de un agente o de un bot con inteligencia artificial conversacional.
+                                    </p>
+                                    <div style="background: rgba(16, 185, 129, 0.1); border-left: 3px solid #10b981; padding: 16px; margin-top: 12px; border-radius: 0 8px 8px 0;">
+                                        <p style="font-size: 13px; color: var(--text-secondary); margin: 0;">
+                                            <strong>Ventana de 24 horas:</strong> Cuando un usuario escribe, se abre una ventana de atención de 24 horas. Dentro de este tiempo, las respuestas de la empresa son <strong>sin costo</strong>. Esta ventana se reinicia con cada mensaje nuevo del usuario.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4 style="color: #f59e0b; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                                        <span style="width: 12px; height: 12px; background: #f59e0b; border-radius: 50%;"></span>
+                                        Mensajes de Marketing
+                                    </h4>
+                                    <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
+                                        Ayudan a las empresas a alcanzar objetivos estratégicos: desde generar reconocimiento hasta impulsar ventas y hacer retargeting. 
+                                    </p>
+                                    <ul style="list-style: none; padding: 0; margin-top: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                                        <li style="font-size: 13px; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+                                            <span style="color: #f59e0b;">•</span> Ofertas y promociones
+                                        </li>
+                                        <li style="font-size: 13px; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+                                            <span style="color: #f59e0b;">•</span> Sugerencias de productos
+                                        </li>
+                                        <li style="font-size: 13px; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+                                            <span style="color: #f59e0b;">•</span> Carritos abandonados
+                                        </li>
+                                        <li style="font-size: 13px; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+                                            <span style="color: #f59e0b;">•</span> Recordatorios y avisos
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1692,6 +2012,51 @@
                 }
             });
         });
+
+        // WhatsApp Tabs Functionality
+        function switchTab(evt, tabId) {
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            tabBtns.forEach(btn => btn.classList.remove('active'));
+
+            document.getElementById(tabId).classList.add('active');
+            evt.currentTarget.classList.add('active');
+        }
+
+        // Calculator Logic
+        function calculateCosts() {
+            const countInput = document.getElementById('message-count');
+            const servicePercentInput = document.getElementById('service-percent');
+            
+            let count = parseInt(countInput.value) || 0;
+            let servicePercent = parseInt(servicePercentInput.value) || 90;
+
+            // Constrain service percentage between 85 and 99
+            if (servicePercent < 85) servicePercent = 85;
+            if (servicePercent > 99) servicePercent = 99;
+            
+            const marketingPercent = (100 - servicePercent) / 100;
+            const marketingRate = 0.0125;
+            
+            const marketingCount = Math.round(count * marketingPercent);
+            const serviceCount = count - marketingCount;
+            const marketingCost = marketingCount * marketingRate;
+
+            // Update Labels
+            document.getElementById('marketing-label').innerText = `Mensajes de Marketing (${100 - servicePercent}%)`;
+            document.getElementById('service-label').innerText = `Mensajes de Servicio (${servicePercent}%)`;
+
+            // Update Values
+            document.getElementById('marketing-count').innerText = marketingCount.toLocaleString();
+            document.getElementById('service-count').innerText = serviceCount.toLocaleString();
+            document.getElementById('marketing-cost').innerText = `$${marketingCost.toFixed(2)} USD`;
+            document.getElementById('total-cost').innerText = `$${marketingCost.toFixed(2)}`;
+        }
+
+        // Initialize calculator
+        window.addEventListener('load', calculateCosts);
 
         // Smooth scroll to WhatsApp API section
         document.querySelector('.whatsapp-api-cta').addEventListener('click', function(e) {

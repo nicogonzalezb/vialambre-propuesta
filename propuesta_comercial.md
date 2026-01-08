@@ -80,7 +80,31 @@ La propuesta se presenta bajo un modelo de recurrencia mensual. El cliente tiene
 >
 > **Contrato:** Firma mínima de 1 año.
 
-## 6. Arquitectura Técnica Requerida
+## 6. Producto Adicional: WhatsApp Business API (Ecosistema Meta)
+
+Ofrecemos la configuración completa de la API oficial de WhatsApp Business como un servicio adicional para mayor estabilidad y escalabilidad.
+
+### 6.1 Configuración e Implementación
+*   **Inversión:** $800,000 COP (Pago único).
+*   **Incluye:** Configuración en Meta Developers, integración técnica, webhooks y soporte en migración.
+
+### 6.2 Calculadora de Costos (Meta - Colombia USD)
+
+*... (Tabla omitida para brevedad en esta actualización específica) ...*
+
+### 6.3 Definiciones de Mensajes (Meta)
+
+Para entender cómo se aplican los cobros, es fundamental distinguir los dos tipos principales de interacciones:
+
+*   **Mensajes de Servicio (GRATIS\*):** Permiten administrar las consultas de los clientes (vía agente o IA). Al recibir un mensaje del cliente, se abre una **ventana de atención de 24 horas** donde las respuestas de la empresa no tienen costo. Esta ventana se reinicia con cada nueva interacción del usuario.
+*   **Mensajes de Marketing:** Mensajes iniciados por la empresa para objetivos comerciales (ofertas, promociones, retargeting, carritos abandonados o sugerencias de productos). Estos mensajes siempre tienen un costo asociado según la tarifa vigente.
+
+### 💡 Análisis e Insights
+*   **Volumen Actual (14,718):** El costo aproximado es de **$18.40 USD/mes**.
+*   **Ahorro:** Los 13,246 mensajes de servicio al mes serian completamente **GRATIS**.
+*   **Escalabilidad:** Subir a 20,000 mensajes solo incrementa el costo en ~$6.60 USD.
+
+## 7. Arquitectura Técnica Requerida
 
 Para la implementación, el proveedor gestionará la integración sobre los sistemas actuales del cliente:
 
