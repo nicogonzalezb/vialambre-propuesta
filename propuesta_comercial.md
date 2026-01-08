@@ -88,7 +88,7 @@ Ofrecemos la configuración completa de la API oficial de WhatsApp Business como
 
 Basado en un volumen estimado y precios estándar para Colombia. La calculadora permite ajustar tanto el mix de mensajes como la **tasa de cambio (TRM)** para obtener una estimación en pesos colombianos.
 
-| Concepto | 14,718 Mensajes | 16,000 Mensajes | 20,000 Mensajes |
+| Concepto | 14,718 Mensajes** | 16,000 Mensajes | 20,000 Mensajes |
 | :--- | :--- | :--- | :--- |
 | **Marketing (10%*)** | 1,472 | 1,600 | 2,000 |
 | **Costo Marketing (USD)** | $18.40 USD | $20.00 USD | $25.00 USD |
