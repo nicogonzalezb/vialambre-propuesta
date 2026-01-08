@@ -139,6 +139,39 @@ La propuesta actual contempla un límite de **aproximadamente 3,000 conversacion
 
 ---
 
+<div style="background-color: #e3f2fd; border-left: 4px solid #2196f3; padding: 20px; margin: 20px 0; border-radius: 5px;">
+
+## 5. Configuración de WhatsApp API
+
+### Producto Adicional: Configuración de WhatsApp Business API
+
+Ofrecemos la **configuración completa de la API oficial de WhatsApp Business** como un servicio adicional a la propuesta principal.
+
+**Inversión:** **$800,000 COP** (pago único)
+
+**¿Qué incluye?**
+
+- Configuración inicial de la cuenta de WhatsApp Business API en Meta Developers
+- Integración técnica con nuestra plataforma
+- Configuración de webhooks y endpoints necesarios
+- Pruebas de funcionamiento y validación
+- Documentación técnica de la configuración realizada
+- Soporte durante el proceso de migración
+
+**Ventajas de migrar a WhatsApp Business API:**
+
+- ✅ Mayor estabilidad y confiabilidad en la conexión
+- ✅ No requiere mantener sesión activa manualmente
+- ✅ Mayor control sobre el histórico de conversaciones
+- ✅ Mejor cumplimiento con políticas de Meta
+- ✅ Escalabilidad mejorada para alto volumen de mensajes
+
+**Nota importante:** Este servicio es independiente de la propuesta principal y puede contratarse de forma adicional. Los costos mensuales de mensajes enviados a través de la API son gestionados directamente con Meta según su plan de facturación.
+
+</div>
+
+---
+
 Quedamos atentos a cualquier aclaración adicional que requieran. Estamos disponibles para agendar una llamada si prefieren profundizar en alguno de estos puntos.
 
 Saludos cordiales,
