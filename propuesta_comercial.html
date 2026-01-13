@@ -2150,24 +2150,36 @@
             const exchangeRateInput = document.getElementById('exchange-rate');
             
             let count = parseInt(countInput.value) || 0;
-            let servicePercent = parseInt(servicePercentInput.value) || 50;
+            let servicePercent = parseFloat(servicePercentInput.value) || 50;
             let exchangeRate = parseFloat(exchangeRateInput.value) || 3750;
 
             // Constrain service percentage between 15 and 99
-            if (servicePercent < 15) servicePercent = 15;
-            if (servicePercent > 99) servicePercent = 99;
+            if (servicePercent < 15) {
+                servicePercent = 15;
+                servicePercentInput.value = 15;
+            }
+            if (servicePercent > 99) {
+                servicePercent = 99;
+                servicePercentInput.value = 99;
+            }
             
+            // Calculate percentages (servicePercent is the percentage of service messages)
             const marketingPercent = (100 - servicePercent) / 100;
+            const servicePercentDecimal = servicePercent / 100;
             const marketingRate = 0.0125;
             
+            // Calculate counts ensuring they add up to total
             const marketingCount = Math.round(count * marketingPercent);
             const serviceCount = count - marketingCount;
             const marketingCostUSD = marketingCount * marketingRate;
             const totalCostCOP = marketingCostUSD * exchangeRate;
 
-            // Update Labels
-            document.getElementById('marketing-label').innerText = `Mensajes de Marketing (${100 - servicePercent}%)`;
-            document.getElementById('service-label').innerText = `Mensajes de Servicio (${servicePercent}%)`;
+            // Update Labels with calculated percentages (not input values)
+            const actualMarketingPercent = count > 0 ? Math.round((marketingCount / count) * 100) : 0;
+            const actualServicePercent = count > 0 ? Math.round((serviceCount / count) * 100) : 0;
+            
+            document.getElementById('marketing-label').innerText = `Mensajes de Marketing (${actualMarketingPercent}%)`;
+            document.getElementById('service-label').innerText = `Mensajes de Servicio (${actualServicePercent}%)`;
 
             // Update Values
             document.getElementById('marketing-count').innerText = marketingCount.toLocaleString();
