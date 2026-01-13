@@ -1,13 +1,15 @@
-FROM node:18-slim
+FROM node:20-slim
 
 WORKDIR /app
+
+# Actualizar sistema y limpiar cache
+RUN apt-get update && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Copiar package.json primero para aprovechar cache
 COPY package.json ./
 
-# Instalar dependencias con flags adicionales para mayor robustez
-RUN npm install --production --no-audit --no-fund --prefer-offline || \
-    npm install --production --no-audit --no-fund
+# Instalar dependencias
+RUN npm install --production --no-audit --no-fund
 
 # Copiar el resto de archivos
 COPY . .
