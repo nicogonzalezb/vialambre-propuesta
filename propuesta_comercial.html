@@ -1772,7 +1772,7 @@
                                 <div class="calc-input-group" style="margin-bottom: 0;">
                                     <label for="service-percent">Mezcla de Servicio (%)</label>
                                     <div class="calc-input-wrapper">
-                                        <input type="number" id="service-percent" class="calc-input" value="90" min="85" max="99" oninput="calculateCosts()">
+                                        <input type="number" id="service-percent" class="calc-input" value="50" min="15" max="99" oninput="calculateCosts()">
                                     </div>
                                 </div>
                             </div>
@@ -2150,11 +2150,11 @@
             const exchangeRateInput = document.getElementById('exchange-rate');
             
             let count = parseInt(countInput.value) || 0;
-            let servicePercent = parseInt(servicePercentInput.value) || 90;
+            let servicePercent = parseInt(servicePercentInput.value) || 50;
             let exchangeRate = parseFloat(exchangeRateInput.value) || 3750;
 
-            // Constrain service percentage between 85 and 99
-            if (servicePercent < 85) servicePercent = 85;
+            // Constrain service percentage between 15 and 99
+            if (servicePercent < 15) servicePercent = 15;
             if (servicePercent > 99) servicePercent = 99;
             
             const marketingPercent = (100 - servicePercent) / 100;
