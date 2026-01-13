@@ -2,18 +2,12 @@ FROM node:20
 
 WORKDIR /app
 
-# Copiar package.json primero para aprovechar cache
-COPY package.json ./
-
-# Instalar dependencias
-RUN npm install --production
-
-# Copiar el resto de archivos
+# Copiar todos los archivos incluyendo node_modules (instalados localmente)
 COPY . .
 
 # Exponer el puerto
 EXPOSE 3000
 
-# Iniciar la aplicación
-CMD ["npm", "start"]
+# Iniciar la aplicación directamente con node
+CMD ["node", "server.js"]
 
